@@ -59,7 +59,7 @@ const CountryCard = () => {
 
             {/* Country Card  */}
             {
-              isShowing== true ? 
+              isShowing === true ? 
                <div className="flex justify-center">
                 <Card details={details} />
                </div> 
