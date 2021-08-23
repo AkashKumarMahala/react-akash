@@ -1,0 +1,22 @@
+button {
+  margin-left: 196px;
+  /* background-image: linear-gradient(
+    to right,
+    rgba(19, 250, 88, 0),
+    rgba(255, 0, 0, 1)
+  ); */
+  background-image: linear-gradient(to right, red, orange);
+  color: rgba(255, 255, 255, 1);
+  transition: ease;
+}
+button:hover {
+  background-image: linear-gradient(to left, red, orange);
+  color: rgba(255, 255, 255, 1);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
