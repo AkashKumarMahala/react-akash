@@ -45,14 +45,17 @@ const Images = () => {
 
     return (
       <>
-       <div className="flex justify-center my-10">
-          <input type="text" placeholder="add new.." className="p-2 border border-gray-500"
+       <div className="flex justify-center my-5">
+         <div>
+           <h1 className="mb-5 text-2xl font-semibold text-center">Unsplash API</h1>
+            <input type="text" placeholder="add new.." className="p-2 border border-gray-500"
         value={inputValue} 
         onChange={(e) => handleChange(e)}
         ref={inputRef}/>
 
         <button className={`px-4 py-2 text-white  ${inputValue === "" ? 'bg-blue-200' : 'bg-blue-500' }`}
         disabled={ inputValue === "" } onClick={ addNewImage }>Add</button>
+         </div>
        </div>
 
         <div className="grid justify-center grid-cols-3 ">
