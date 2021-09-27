@@ -12,6 +12,7 @@ import AppContext from './store/AppContext'
 
 
 const App = () => {
+  
   const [isLoggedIn,setIsLoggedIn]= useState(false)
   const [user,setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true)
