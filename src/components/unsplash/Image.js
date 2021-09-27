@@ -7,7 +7,7 @@ const Image = ({el,id,removeItem,show}) => {
 
     return (
          
-         <div className="relative" onMouseEnter={() => setIsCrossIcon(true)}
+         <div className="relative" onMouseEnter={() => setIsCrossIcon(true)}  key={id}
                 onMouseLeave={() => setIsCrossIcon(false)} >
                 
             <i className={`absolute right-0 text-white hover:text-black cursor-pointer fas fa-times
