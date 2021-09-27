@@ -7,16 +7,12 @@ export default function useFetchAPI(page,inputData) {
      const [errors, setErrors] = useState([])
      const [isLoading, setIsLoading] = useState(false)
 
-     const api = process.env.REACT_APP_UNSPLASH_API;
-     const key = process.env.REACT_APP_UNSPLASH_KEY;
-
-   
 
        useEffect(() => {
          setIsLoading(true)
           if(inputData === ""){
            
-            axios.get(`${api}/photos/?client_id=${key}&page=${page}`)
+            axios.get(`https://api.unsplash.com/photos/?client_id=ls5Szs8Ec2fMFK9BXto8aCadPx-RCZT5VshN-IbxsFk&page=${page}`)
             .then((res) => {
               console.log(res.data);
               setImages([...images,...res.data]);
@@ -33,7 +29,7 @@ export default function useFetchAPI(page,inputData) {
 
    useEffect(() => {
      if(inputData){
-       axios.get(`${api}/search/photos?client_id=${key}&page=${page}&query=${inputData}`)
+       axios.get(`https://api.unsplash.com/search/photos?client_id=ls5Szs8Ec2fMFK9BXto8aCadPx-RCZT5VshN-IbxsFk&page=${page}&query=${inputData}`)
        .then((res) => {
         setImages([...images,...res.data.results])
          setIsLoading(false)
@@ -47,7 +43,7 @@ export default function useFetchAPI(page,inputData) {
    
    useEffect(() => {
      if(inputData){
-       axios.get(`${api}/search/photos?client_id=${key}&page=${page}&query=${inputData}`)
+       axios.get(`https://api.unsplash.com/search/photos?client_id=ls5Szs8Ec2fMFK9BXto8aCadPx-RCZT5VshN-IbxsFk&page=${page}&query=${inputData}`)
        .then((res) => {
         setImages([...res.data.results])
          setIsLoading(false)
